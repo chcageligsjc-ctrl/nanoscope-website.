@@ -1,0 +1,10 @@
+{
+  "description": "Explore an educational homepage that introduces nanotechnology concepts, applications, benefits, risks, and the editorial team in a modern, engaging format.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
