@@ -4,9 +4,6 @@
 # ---------------------------------------------------------------------------
 # Images & Graphics - Keep website images as regular Git files
 # ---------------------------------------------------------------------------
-*.png                -filter -diff -merge -text
-*.jpg                -filter -diff -merge -text
-*.jpeg               -filter -diff -merge -text
 *.gif                -filter -diff -merge -text
 *.bmp                -filter -diff -merge -text
 *.tiff               -filter -diff -merge -text

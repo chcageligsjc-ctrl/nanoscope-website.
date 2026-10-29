@@ -544,52 +544,61 @@ function HomePage() {
       {
         name: "Abea, John Jacob N.",
         role: "Researcher & Journalist",
-        image: "/team/abea.png",
+        image: "/team/ABEA.png",
       },
       {
         name: "Acuña, Jack Nathan T.",
         role: "Researcher, User Interface (UI) Designer & Journalist",
-        image: "/team/acuna.jpg",
+        image: "/team/ACUNA.jpg",
       },
       {
         name: "Arao, Jonnah Myla L.",
         role: "Website Project Manager, Researcher & Journalist",
-        image: "/team/arao.jpg",
+        image: "/team/ARAO.jpg",
       },
       {
         name: "Aurelio, Steven E.",
         role: "Researcher, User Interface (UI) Designer",
-        image: "/team/aurelio.jpg",
+        image: "/team/AURELIO.jpg",
       },
       {
         name: "Cruzado, Sheena A.",
         role: "Researcher",
-        image: "/team/cruzado.jpg",
+        image: "/team/CRUZADO.jpg",
       },
       {
         name: "Gelig, Cherry Ann C.",
         role: "User Interface (UI) Designer & Developer",
-        image: "/team/gelig.png",
+        image: "/team/GELIG.png",
       },
       {
         name: "Ibias, John Cedrick G.",
         role: "Researcher & Journalist",
-        image: "/team/ibias.jpg",
+        image: "/team/IBIAS.jpg",
       },
       {
         name: "Villen, Anthony Kim",
         role: "Researcher",
-        image: "/team/villen.jpg",
+        image: "/team/VILLEN.jpg",
       },
     ].map((member, index) => (
       <article className="member-card" key={member.name}>
         <div className="avatar">
-          <img
-            className="member-photo"
-            src={member.image}
-            alt={member.name}
-            loading="lazy"
-          />
+         <img
+  className="member-photo"
+  src={member.image}
+  alt={member.name}
+  onError={(e) => {
+    console.error("Team photo failed to load:", member.image);
+  }}
+  onLoad={(e) => {
+    console.log(
+      "Team photo loaded:",
+      member.image,
+      e.currentTarget.naturalWidth
+    );
+  }}
+/>
           <span>{String(index + 1).padStart(2, "0")}</span>
         </div>
 
